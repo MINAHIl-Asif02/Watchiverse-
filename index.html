@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <title>Watch Store</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="" />
+          <span class="text-uppercase fw-bold fs-6">Watchiverse</span>
+        </a>
+        <button
+          class="navbar-toggler ms-auto me-3 border-0 shadow-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="menu-icon fs-6"><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#landing"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#featured">Featured</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#new">New</a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+
+        <div class="more-icons">
+          
+          <span class="search-icon">
+            <i class="fa-solid fa-search"></i>
+          </span>
+          
+          
+          
+          <span class="theme-icon">
+            <i class="fa-solid fa-moon"></i>
+          </span>
+
+          <span class="shop-icon mx-3">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="count">0</span>
+          </span>
+        </div>
+      </div>
+      
+    
+      <form class="search-form">
+      <input type="search" id="search-box" placeholder="search here...." onkeyup="search()">
+      <label for="search-box" ><i class="fa fa-search"></i></label>
+     
+      
+    </form>
+    
+    </nav>
+    
+    
+
+    <div class="market">
+      <span class="close-icon d-block ms-auto mb-3">
+        <i class="fa-solid fs-2 fa-xmark"></i>
+      </span>
+      <h4 class="text-center mb-5">My Products</h4>
+      <div class="my-products mb-5"></div>
+      <div class="info d-flex justify-content-between">
+        <div class="product-count"><span>0</span> items</div>
+        <div class="total">$0</div>
+      </div>
+    </div>
+
+    <main
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example3"
+      data-bs-smooth-scroll="true"
+      class="scrollspy-example-2"
+      tabindex="0"
+    >
+      <section id="landing" class="landing">
+        <div class="container">
+          <div class="row">
+            <div class="col-1">
+              <div class="links">
+                <a href="">Instagram</a>
+                <a href="">Linkedin</a>
+                <a href="">Facebook</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="text">
+                <h1 class="mb-3">
+                  NEW WATCH <br />
+                  COLLECTIONS B720
+                </h1>
+                <p class="mb-4 lh-sm pe-xl-5">
+                  Latest arrival of the new imported watches of the B720 series,
+                  with a modern and resistant design.
+                </p>
+                <span class="price mb-5">$1245</span>
+                <div class="buttons d-flex align-items-center">
+                  <button class="gray-btn">Discover</button>
+                  <button
+                    onclick="window.scrollTo({top: document.querySelector('#new').offsetTop })"
+                    class="my-btn"
+                  >
+                    Show More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-11 col-md-6">
+              <div class="image text-center">
+                <img class="" src="img/home.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="py-section featured">
+        <div class="container">
+          <h2 class="main-head">featured</h2>
+          <div class="row row-gap-4">
+            <div class="col-md-4">
+              
+              <div class="box">
+                <span class="sale">sale</span>
+                <img src="img/feature/featured1.png" alt="" />
+                <h3 class="box-title">JAZZMASTER</h3>
+                <span class="box-price">$1050</span>
+                <button class="my-btn">add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <span class="sale">sale</span>
+                <img src="img/feature/featured2.png" alt="" />
+                <h3 class="box-title">INGERSOLL</h3>
+                <span class="box-price">$250</span>
+                <button class="my-btn">add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box">
+                <span class="sale">sale</span>
+                <img src="img/feature/featured3.png" alt="" />
+                <h3 class="box-title">ROSE GOLD</h3>
+                <span class="box-price">$890</span>
+                <button class="my-btn">add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story py-section">
+        <div class="container pt-lg-5">
+          <div class="row row-gap-5">
+            <div class="col-md-6">
+              <div class="image">
+                <div class="square"></div>
+                <img src="img/story.png" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="content">
+                <h2 class="main-head">our story</h2>
+                <h3 class="mb-3">
+                  Inspirational Watch of <br />
+                  this year
+                </h3>
+                <p class="mb-5">
+                  The latest and modern watches of this year, is available in
+                  various presentations in this store, discover them now.
+                </p>
+                <button class="my-btn text-capitalize">Discover</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+
+      <section id="products" class="py-section product">
+        <div class="container">
+          <h2 class="main-head">product</h2>
+          <div class="row row-gap-5 gx-sm-5">
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img  src="img/product/product1.png" alt="" />
+                <h3 class="box-title">SPIRIT ROSE</h3>
+                <span class="box-price">$1500</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img src="img/product/product2.png" alt="" />
+                <h3 class="box-title">KHAKI PILOT</h3>
+                <span class="box-price">$1350</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img src="img/product/product3.png" alt="" />
+                <h3 class="box-title">JUBILEE BLACK</h3>
+                <span class="box-price">$870</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img src="img/product/product4.png" alt="" />
+                <h3 class="box-title">FOSIL ME3</h3>
+                <span class="box-price">$650</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img src="img/product/product5.png" alt="" />
+                <h3 class="box-title">DUCHEN</h3>
+                <span class="box-price">$950</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img src="img/product/product1.png" alt="" />
+                <h3 class="box-title">TAG HEUER</h3>
+                <span class="box-price">$1200</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img src="img/product/product2.png" alt="" />
+                <h3 class="box-title">CARTIER</h3>
+                <span class="box-price">$750</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-3">
+              <div class="box">
+                <img src="img/product/product3.png" alt="" />
+                <h3 class="box-title">BREITLING</h3>
+                <span class="box-price">$4000</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials py-section">
+        <div class="container pt-lg-5">
+          <div class="row row-gap-5">
+            <div class="col-md-6">
+              <div class="content">
+                <span class="quote-icon mb-5"
+                  ><i class="fa-solid fs-2 fa-quote-left"></i
+                ></span>
+                <p class="text mb-3 lh-sm">
+                  They are the best watches that one acquires, also they are
+                  always with the latest news and trends, with a very
+                  comfortable price and especially with the attention you
+                  receive, they are always attentive to your questions.
+                </p>
+                <p class="history mb-4">June 10. 2024</p>
+                <div class="info mb-5">
+                  <img src="img/testimonial/testimonial1.jpg" alt="" />
+                  <div class="text">
+                    <h3>Alan Robben</h3>
+                    <p>Director of a company</p>
+                  </div>
+                </div>
+                <div class="controls">
+                  <span class="left-btn me-4">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </span>
+                  <span class="left-btn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="image">
+                <div class="square"></div>
+                <img src="img/testimonial/testimonial.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="new" class="py-section new">
+        <div class="container">
+          <h2 class="main-head mt-lg-5">new arrivals</h2>
+          <div class="row row-gap-4">
+            <div class="col-sm-6 col-lg-3">
+              <div class="box">
+                <span class="new-word">new</span>
+                <img src="img/new/new1.png" alt="" />
+                <h3 class="box-title">LONGINES ROSE</h3>
+                <span class="box-price">$990</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="box">
+                <span class="new-word">new</span>
+                <img src="img/new/new2.png" alt="" />
+                <h3 class="box-title">BLANCPAIN</h3>
+                <span class="box-price">$3110</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="box">
+                <span class="new-word">new</span>
+                <img src="img/new/new3.png" alt="" />
+                <h3 class="box-title">DREYFUSS GOLD</h3>
+                <span class="box-price">$4500</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="box">
+                <span class="new-word">new</span>
+                <img src="img/new/new4.png" alt="" />
+                <h3 class="box-title">PORTUGUESE ROSE</h3>
+                <span class="box-price">$9800</span>
+                <span class="buy-icon"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="letter py-section">
+        <div class="container">
+          <div class="parent">
+            <div class="text">
+              <h2 class="mb-4">
+                Subscribe Our <br />
+                Newsletter
+              </h2>
+              <p class="lh-sm">
+                Don't miss out on your discounts. Subscribe to our email
+                newsletter to get the best offers, discounts, coupons, gifts and
+                much more.
+              </p>
+            </div>
+
+            <form action="">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit" class="my-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-section">
+      <div class="container">
+        <div class="info">
+          <h5>Our information</h5>
+          <p class="lh-lg">
+            1234 - Peru <br />
+            La Libertad 43210 <br />
+            123-456-789 <br />
+          </p>
+        </div>
+        <div class="box">
+          <h5>About Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="">Support Center</a>
+            </li>
+            <li>
+              <a href="">Customer Support</a>
+            </li>
+            <li>
+              <a href="">About Us</a>
+            </li>
+            <li>
+              <a href="">Copy Right</a>
+            </li>
+          </ul>
+        </div>
+        <div class="box">
+          <h5>Product</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="">Road bikes</a>
+            </li>
+            <li>
+              <a href="">Mountain bikes</a>
+            </li>
+            <li>
+              <a href="">Electric</a>
+            </li>
+            <li>
+              <a href="">Accesories</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social">
+          <h5>Social</h5>
+          <div class="links">
+            <a href="">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright text-center">
+        <p>© <span>M.W</span>. All rigths reserved</p>
+      </div>
+    </footer>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
