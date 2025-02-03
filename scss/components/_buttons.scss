@@ -1,0 +1,27 @@
+.my-btn,
+.gray-btn {
+  outline: none;
+  border: none;
+  transition: $transition;
+  font-weight: $font-medium;
+  @media (max-width: 991px) {
+    font-size: $normal-font-size;
+  }
+}
+.my-btn {
+  color: $white;
+  background-color: $btn-color;
+  padding: 1.25rem 2rem;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $btn-color-alt;
+  }
+}
+.gray-btn {
+  padding: 1rem 1.5rem;
+  background-color: #bfbfbf;
+  color: $title-color;
+  &:hover {
+    background-color: #a1a1a1;
+  }
+}

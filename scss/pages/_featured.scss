@@ -1,0 +1,45 @@
+.featured {
+  .box {
+    @extend %box-style;
+    overflow: hidden;
+    .sale {
+      position: absolute;
+      left: 0;
+      top: 2rem;
+      writing-mode: vertical-lr;
+      background-color: $primary;
+      padding: 1rem 0.5rem;
+      color: $white;
+      font-size: $small-font-size;
+      text-transform: uppercase;
+      font-weight: $font-medium;
+    }
+    img {
+      max-width: 10rem;
+      @media (max-width: 1199px) {
+        width: 8.75rem;
+      }
+    }
+    h3 {
+      transform: translateY(1rem);
+    }
+    .box-price {
+      
+      transform: translateY(1.5rem);
+    }
+    .my-btn {
+      padding: 1rem 1.5rem;
+      font-size: $smaller-font-size;
+      transform: translateY(6rem);
+    }
+    h3 , .box-price , .my-btn {
+      transition: $transition;
+    }
+    &:hover {
+      box-shadow: 0 6px 12px hsla(0, 0%, 20%, .1);
+      h3 , .box-price , .my-btn {
+        transform: translateY(0);
+      }
+    }
+  }
+}

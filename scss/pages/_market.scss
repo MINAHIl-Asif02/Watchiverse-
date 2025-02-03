@@ -1,0 +1,85 @@
+.market {
+  overflow: auto;
+  scrollbar-width: thin;
+  position: fixed;
+  top: 0;
+  right: -26rem;
+  width: 25rem;
+  height: 100vh;
+  background-color: $white;
+  z-index: 1111;
+  box-shadow: -2px 0 4px hsla(0, 0%, 15%, 0.1);
+  padding: 2rem;
+  transition: $transition;
+  &.show {
+    right: 0;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 1rem;
+    right: calc(-100% - 1rem);
+  }
+  .close-icon {
+    width: fit-content;
+    cursor: pointer;
+    color: $text-color;
+    transition: $transition;
+    &:hover {
+      color: $title-color;
+    }
+  }
+  .my-products {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    .my-product {
+      display: flex;
+      align-items: center;
+      .image {
+        padding: 0.75rem 1.25rem;
+        border: 1px solid $border-color;
+        img {
+          width: 3.125rem;
+        }
+      }
+      .content {
+        h5 {
+          font-size: $normal-font-size;
+        }
+        .price {
+          font-size: $smaller-font-size;
+        }
+        .controls {
+          display: flex;
+          .minus,
+          .plus {
+            font-size: $small-font-size;
+            height: 1.5rem;
+            width: 2rem;
+            text-align: center;
+            line-height: 1.5rem;
+            border: 1px solid $border-color;
+            cursor: pointer;
+            color: $text-color;
+            transition: $transition;
+            &:hover {
+              color: $title-color;
+            }
+            &.disabled {
+              cursor: no-drop;
+              pointer-events: none;
+              color: $border-color;
+            }
+          }
+        }
+        .remove-product-icon {
+          color: $primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .info {
+    color: $title-color;
+  }
+}

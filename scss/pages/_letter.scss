@@ -1,0 +1,53 @@
+.letter {
+  .parent {
+    padding: 4.5rem;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 2rem;
+    @media (max-width: 767px) {
+      padding: 2.5rem;
+    }
+    .text {
+      @media (max-width: 767px) {
+        h2 {
+          font-size: $h3-font-size;
+        }
+        p {
+          font-size: $normal-font-size;
+        }
+      }
+    }
+    .text,
+    form {
+      flex-basis: calc(50% - 2rem);
+    }
+    form {
+      display: flex;
+      align-items: center;
+      button,
+      input {
+        height: fit-content;
+      }
+      input {
+        padding: 1.25rem 2rem;
+        outline: none;
+        border: none;
+        color: $text-color;
+      }
+      @media (max-width: 991px) {
+        justify-content: center;
+      }
+      @media (max-width: 767px) {
+        flex-direction: column;
+        *{
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: 991px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

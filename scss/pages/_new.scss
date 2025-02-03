@@ -1,0 +1,59 @@
+.new {
+  .box {
+    @extend %box-style;
+    overflow: hidden;
+    max-width: 21rem;
+    margin-left: auto;
+    margin-right: auto;
+    .new-word {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: $primary;
+      padding: 0.5rem 1rem;
+      color: $white;
+      font-size: $small-font-size;
+      text-transform: uppercase;
+      font-weight: $font-medium;
+    }
+    .buy-icon {
+      position: absolute;
+      right: -2.5rem;
+      bottom: 0;
+      height: 2rem;
+      width: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      background-color: $title-color;
+      color: $white;
+      cursor: pointer;
+      transition: $transition;
+    }
+    .box-price {
+      transition: $transition;
+    }
+    &:hover {
+      background-color: $primary;
+      .new-word {
+        background-color: $title-color;
+      }
+      .box-price {
+        color: $title-color;
+      }
+      .buy-icon {
+        animation: move $transition 1 forwards;
+      }
+    }
+    @keyframes move {
+      50% {
+        right: 3rem;
+      }
+      100% {
+        right: 0;
+      }
+    }
+    img {
+      height: 13.438rem;
+    }
+  }
+}
